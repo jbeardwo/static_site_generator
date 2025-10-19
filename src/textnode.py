@@ -4,7 +4,7 @@ from types import CodeType
 class TextType(Enum):
     TEXT = "text"
     BOLD = "bold"
-    ITATLIC = "italic"
+    ITALIC = "italic"
     CODE = "code"
     LINK = "link"
     IMAGE = "image"
