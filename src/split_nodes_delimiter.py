@@ -7,6 +7,8 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
         part = []
         if node.text_type != TextType.TEXT:
             out.append(node)
+        elif delimiter not in node.text:
+                out.append(node)
         else:
             new_nodes = (node.text.split(delimiter))
             if len(new_nodes) < 3 or len(new_nodes) % 2 == 0:
