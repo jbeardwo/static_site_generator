@@ -1,8 +1,6 @@
 
 
-def markdown_to_block(markdown):
-    out = markdown.split('\n\n')
-    for block in out:
-        block = block.strip()
-
+def markdown_to_blocks(markdown):
+    out = markdown.strip().split('\n\n')
+    out = [block.strip() for block in out]
     return out
