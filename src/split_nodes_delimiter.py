@@ -39,8 +39,8 @@ def split_nodes_image(old_nodes):
                     else:
                         new_node = TextNode(alt, TextType.IMAGE, url)
                     part.append(new_node)
-        if text:
-            part.append(TextNode(text, TextType.TEXT))
+            if text:
+                part.append(TextNode(text, TextType.TEXT))
         out.extend(part)
     return out
 
@@ -64,8 +64,7 @@ def split_nodes_link(old_nodes):
                     else:
                         new_node = TextNode(anchor, TextType.LINK, url)
                     part.append(new_node)
-        if text:
-            part.append(TextNode(text, TextType.TEXT))
+            if text:
+                part.append(TextNode(text, TextType.TEXT))
         out.extend(part)
-    print(out)
     return out
